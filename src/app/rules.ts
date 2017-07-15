@@ -1,10 +1,10 @@
 import {
-    AngularmService, EntityLineComponent, 
-    CreateEntityComponent, EditEntityFormComponent,
-    FormLineComponent, EditFormLineComponent,
-    EntityDetailsComponent, ShowLineComponent,
-    ListingTableComponent
+    AngularmService, CreateEntityComponent,
+    EditEntityFormComponent, FormLineComponent,
+    EditFormLineComponent, EntityDetailsComponent,
+    ShowLineComponent, ListingTableComponent
 } from 'angularm';
+import { ActionsEntityLineComponent } from "app/widgets/actions.entityline";
 
 export let defineRules = (angularm: AngularmService) => {
     angularm
@@ -12,7 +12,7 @@ export let defineRules = (angularm: AngularmService) => {
         .dptr('form_line', FormLineComponent, { inputType: 'text' })
         .dpr('show_line', ShowLineComponent)
         .detr('list_entities', ListingTableComponent)
-        .der('table_line', EntityLineComponent)
+        .der('table_line', ActionsEntityLineComponent)
         .der('show_entity', EntityDetailsComponent)
         .detr('create_form', CreateEntityComponent)
         .der('edit_form', EditEntityFormComponent)
